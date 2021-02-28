@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap for styling-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="logo">
+        <a href="https://manosjuntas.org/" target="_blank"><img src="logo.png" style="width: 200px;"></a>
+    </div>
+    <div id="ribbon" data-toggle="modal" data-target="#exampleModal">
+        <img class="rb rb-cursor" id="changeImg" src="newblue.png" onclick="cut()">
+    </div>
+    <div class="pyro hide">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <div class="text">
+        <p id="msg"></p>
+    </div>
+    <div style="text-align: center;" class="hide back">
+        <button type="submit" class="btn btn-sm btn-warning" onClick="refreshPage()" style="font-weight: bold;">Back to
+            Main</button>
+    </div>
+
+    <div class="footer">
+        <p>Created by <a href="https://hyunjinjae.com/" target="_blank">Hyunjin Jae</a></p>
+    </div>
+</body>
+
+<script>
+    function cut() {
+        document.getElementById("changeImg").src = "newblueCUT.png";
+        document.getElementById("msg").innerHTML = "Happy 26th Anniversary Manos Juntas!";
+        $(".back").removeClass("hide");
+        $(".pyro").removeClass("hide");
+    }
+
+    function refreshPage() {
+        window.location.reload();
+    }
+</script>
+
+</html>
